@@ -1,12 +1,11 @@
 import { FaPlus } from 'react-icons/fa'
 import { Navbar } from '../components/Navbar'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { TaskModal } from '../components/TaskModal'
 import { TaskList } from '../components/TaskList'
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-
 
   const handleOpenModal = () => {
     setIsModalOpen(true)

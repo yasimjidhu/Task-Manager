@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react'
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { useCallback, useState } from 'react'
+import axios, { AxiosRequestConfig } from 'axios'
 
 interface UseAxiosProps {
   url: string

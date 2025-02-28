@@ -39,19 +39,22 @@ export const TaskList = () => {
               <div className='w-6 h-6 rounded-full bg-black flex justify-center items-center col-span-2'>
                 <h1 className='text-md font-bold text-slate-300'>{index + 1}</h1>
               </div>
-              <h2 className='text-2xl font-serif text-center col-span-8'>{task.title}</h2>
+              <div className='col-span-8'>
+                <h2 className='text-2xl font-serif text-center'>{task.title}</h2>
+                <p className='text-gray-500 text-center'>{task.description}</p>
+              </div>
               <div className='col-span-2'>
-              <FaThumbsUp
-                className={`absolute right-15 top-5 ${task.completed ? 'text-green-500 cursor-not-allowed'   : 'text-black cursor-pointer'}`}
-                size={20}
-                onClick={() => handleTaskCompleted(task._id)}
-              />
-              <IoIosCloseCircle
-                className='absolute right-5 top-5 cursor-pointer'
-                size={25}
-                color='red'
-                onClick={() => handleDeleteTask(task._id)}
-              />
+                <FaThumbsUp
+                  className={`absolute right-15 top-5 ${task.completed ? 'text-green-500 cursor-not-allowed' : 'text-black cursor-pointer'}`}
+                  size={20}
+                  onClick={() => handleTaskCompleted(task._id)}
+                />
+                <IoIosCloseCircle
+                  className='absolute right-5 top-5 cursor-pointer'
+                  size={25}
+                  color='red'
+                  onClick={() => handleDeleteTask(task._id)}
+                />
               </div>
             </div>
           ))}
