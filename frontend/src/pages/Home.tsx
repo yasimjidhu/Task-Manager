@@ -21,9 +21,11 @@ const Home = () => {
       <div className='container mx-auto p-4'>
         <h4 className='text-2xl font-serif text-center'>Manage your tasks</h4>
         <div className='flex justify-end'>
-          <button className='flex items-center bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded cursor-pointer' onClick={handleOpenModal}>
-            <FaPlus className='mr-2' />
-            Add Task
+          <button
+            className="flex items-center bg-black hover:bg-slate-900 transition-all transform hover:scale-105 ease-in-out text-white font-bold py-2 px-4 rounded cursor-pointer"
+            onClick={handleOpenModal}
+          >
+            Open Modal
           </button>
         </div>
         <div className='mt-4 flex justify-center items-center'>
@@ -31,9 +33,9 @@ const Home = () => {
         </div>
       </div>
       {!isModalOpen && (
-      <div className='flex justify-center items-center p-4'>
-        <TaskList />
-      </div>
+        <div className='flex justify-center items-center p-4'>
+          <TaskList />
+        </div>
       )}
     </>
   )
